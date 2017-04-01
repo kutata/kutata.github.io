@@ -1,0 +1,80 @@
+* { font-family: 'Courier New', Courier, monospace; }
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+textarea, pre {
+	-moz-tab-size : 4;
+	-o-tab-size : 4;
+	tab-size : 4;
+}
+
+.little-editor-wrapper {
+  display: flex;
+  /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  */
+  padding: 20px;
+  height: 300px;
+  box-shadow: 3px 3px 5px #d1d1d1;
+  background: rgba(0,0,0,0.75);
+}
+
+.little-editor-wrapper > * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+  outline: none;
+
+  line-height: 14px;
+  font-size: 12px;
+}
+
+.little-editor-linebar {
+  display: block;
+  min-width: 20px;
+  text-align: center;
+
+  overflow-y: scroll;
+  overflow: hidden;
+}
+
+.little-editor-linebar span {
+  display: block;
+  width: 100%;
+  color: #b2b2b2;
+  justify-content: center;
+}
+
+.little-editor-linebar .current-line {
+  display: block;
+  background: #ddd;
+  color: #000!important;
+  width: 100%;
+}
+
+.little-editor {
+  background: transparent;
+  padding: 0 20px;
+  width: 100%;
+  color: #b0d8fd;
+  resize: none;
+  white-space: nowrap;
+  overflow-x: auto;
+}

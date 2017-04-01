@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Little Editor</title>
+  <script src="public/js/littleditor.js"></script>
+  <link rel="stylesheet" href="public/css/littleditor.css" />
+</head>
+<body>
+
+<div style="margin: 20px auto; width: 700px;">
+  <div id="demo"></div>
+</div>
+
+<script>
+  var editor = new LittleEditor('demo', function(self) {
+    var txt =
+`!@#$%
+12345
+ABCDE
+QWERT
+ZXCVB`
+  
+    self.editor.value = txt;
+  });
+</script>
+</body>
+</html>

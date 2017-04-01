@@ -1,0 +1,31 @@
+* { color: #310708; }
+h1 { font-size: 1.17em; }
+h2 { font-size: 1.1em; }
+h3 { font-size: 0.83em; }
+h4 { font-size: 0.67em; }
+h5 { font-size: 0.5em; }
+ul li { list-style: square; }
+a { color: #c5230e; }
+
+.container {
+  margin: 100px auto;
+  width: 800px;
+}
+
+header h1 {
+  position: relative;
+}
+
+header h1 span {
+  position: absolute;
+  top: 35px;
+  left: 60px;
+}
+
+section {
+  margin: 50px auto;
+}
+
+footer {
+  text-align: center;
+}
