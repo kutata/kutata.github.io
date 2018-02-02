@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Little Editor</title>
+  <script src="editor.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="editor.css" />
+</head>
+<body>
+
+<div style="margin: 20px auto; width: 700px;">
+  <div id="demo"></div>
+</div>
+
+<script>
+  var editor = new LittleEditor('demo', function(self) {
+    var txt =
+`!@#$%
+12345
+ABCDE
+QWERT
+ZXCVB`
+  
+    self.editor.value = txt;
+  });
+</script>
+</body>
+</html>
