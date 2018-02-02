@@ -1,0 +1,38 @@
+.clearfix:after { 
+  content: "."; 
+  visibility: hidden; 
+  display: block; 
+  height: 0; 
+  clear: both;
+} 
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+
+.container {
+  margin: 0 auto;
+  width: 980px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.row span {
+  display: inline-block;
+  flex: auto;
+}
+
+.th span {
+  font-weight: bold;
+}
+
