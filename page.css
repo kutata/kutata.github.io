@@ -5,6 +5,7 @@ h3 { font-size: 0.83em; }
 h4 { font-size: 0.67em; }
 h5 { font-size: 0.5em; }
 ul li { list-style: square; }
+li { height: 25px; line-height: 25px; }
 a { color: #c5230e; }
 
 .container {
@@ -22,6 +23,8 @@ header h1 span {
   left: 60px;
 }
 
+header p { text-indent: 25px; }
+
 section {
   margin: 50px auto;
 }
@@ -29,3 +32,5 @@ section {
 footer {
   text-align: center;
 }
+
+.to-be-continue { color: #999; }
