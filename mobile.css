@@ -1,0 +1,11 @@
+/* onlly support mobile phone right now */
+
+@media (max-width: 768px) {
+  .container {
+    margin: 20px 20px;
+  }
+
+  header p {
+    text-indent: 0;
+  }
+}
