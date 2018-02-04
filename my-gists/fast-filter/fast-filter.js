@@ -65,9 +65,9 @@ FastFilter.prototype = {
         var key = format[j].column;
         var span = document.createElement('span');
         span.innerHTML = this.data[this.filtered[i]]._data[key];
-        row.append(span);
+        row.appendChild(span);
       }
-      table.append(row);
+      table.appendChild(row);
     }
   },
 
