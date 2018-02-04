@@ -20,8 +20,8 @@ LittleEditor.prototype = {
     this.editor = document.createElement('textarea');
     this.editor.className = 'little-editor'
 
-    this.wrapper.append(this.linebar);
-    this.wrapper.append(this.editor);
+    this.wrapper.appendChild(this.linebar);
+    this.wrapper.appendChild(this.editor);
 
     // events binding
     this.keyup();
