@@ -31,7 +31,7 @@ header {
 }
 .header-content {
   position: relative;
-  margin: 20px auto;
+  margin: 20px auto 0;
   max-width: 600px;
   border-bottom: 1px solid #9a9a9a;
 }
@@ -45,17 +45,18 @@ header {
 .main {
   position: relative;
   margin: 150px auto 0;
+  padding-bottom: 30px;
   max-width: 600px;
 }
 
 section {
-  margin: 50px auto;
+  margin: 30px auto 0;
 }
 
 section h2 {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #9a9a9a;
+  border-bottom: 1px solid #ccc;
 }
 
 dl {
@@ -88,17 +89,18 @@ footer {
 
 /* mobile devices support */
 @media (max-width: 600px) {
-  .main {
-    margin: 130px 20px 0;
-  }
-
   .header-content {
-    margin: 0 20px 20px;
+    margin: 20px 20px 0px;
   }
 
   .header-content p {
     text-indent: 0;
   }
+
+  .main {
+    margin: 150px 20px 0;
+  }
+
 
   .footer-content {
     border-top: 1px solid #9a9a9a;
