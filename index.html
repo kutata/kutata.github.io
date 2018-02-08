@@ -120,16 +120,16 @@
   }
 
   collapsed.addEventListener('click', function(event) {
-    Collapse();
     event.stopPropagation();
+    event.preventDefault();
+    Collapse();
   });
   window.addEventListener('click', function() {
-    console.log('~');
     Collapse(false);
   });
 
   var as = document.querySelectorAll('a');
-  for (let i = 0; i < as.length; i++) {
+  for (var i = 0; i < as.length; i++) {
     as[i].addEventListener('click', function(event) { 
       event.stopPropagation();
       if (this.className == 'disabled')
