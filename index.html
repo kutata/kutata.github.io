@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>😂Hi, I'm kutata.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="tea.png">
 <link rel="stylesheet" href="tea.css" />
 <link rel="stylesheet" href="mobile.css" />
 </head>
@@ -16,9 +17,31 @@
     </div>
     <p>thanks for your time to looking this. :D</p>
   </div>
+
+  <div  class="header-content-mobile">
+    <a href="#" class="collapsed"></a>
+    <img class="mini-logo" src="tea.png" alt="logo" />
+  </div>
 </header>
 
 <div class="main">
+  <aside>
+    <h2>Sidebar</h2>
+    <dl>
+      <dt>Gists:</dt>
+      <!--
+      <dd>G.1</dd> 
+      <dd>G.2</dd> 
+      -->
+    </dl>
+
+    <dl>
+      <dt>Repos:</dt>
+      <dd><a href="javascript:void(0);" class="disabled">nav 1</a></dd> 
+      <dd><a href="javascript:void(0);" class="disabled">nav 2</a></dd> 
+    </dl>
+  </aside>
+
   <div class="content">
     <h1>Gists:</h1>
 
@@ -57,22 +80,6 @@
     </section>
   </div>
 
-  <aside>
-    <h2>Sidebar</h2>
-    <dl>
-      <dt>Gists:</dt>
-      <!--
-      <dd>G.1</dd> 
-      <dd>G.2</dd> 
-      -->
-    </dl>
-
-    <dl>
-      <dt>Repos:</dt>
-      <dd><a href="#" class="disabled">nav 1</a></dd> 
-      <dd><a href="#" class="disabled">nav 2</a></dd> 
-    </dl>
-  </aside>
 
   <!--
   <section>
@@ -91,5 +98,45 @@
   </div>
 </footer>
 
+<script>
+!function() {
+  var aside = document.querySelector('aside');
+  var collapsed = document.querySelector('.collapsed');
+
+  var show = false;
+  function Collapse(_show) {
+    if (typeof _show == 'boolean')
+      show = _show;
+    else
+      show = !show;
+
+    if (show) {
+      collapsed.className = 'collapsed off'
+      aside.className = 'show';
+    } else {
+      collapsed.className = 'collapsed'
+      aside.className = '';
+    }
+  }
+
+  collapsed.addEventListener('click', function(event) {
+    Collapse();
+    event.stopPropagation();
+  });
+  window.addEventListener('click', function() {
+    console.log('~');
+    Collapse(false);
+  });
+
+  var as = document.querySelectorAll('a');
+  for (let i = 0; i < as.length; i++) {
+    as[i].addEventListener('click', function(event) { 
+      event.stopPropagation();
+      if (this.className == 'disabled')
+        event.preventDefault();
+    });
+  };
+}();
+</script>
 </body>
 </html>

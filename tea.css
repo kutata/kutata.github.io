@@ -28,7 +28,7 @@ header {
   top: 0;
   width: 100%;
   overflow: hidden;
-  z-index: 1;
+  z-index: 3;
   background-color: white;
 }
 
@@ -51,6 +51,55 @@ header {
 }
 .header-content p { text-indent: 25px; }
 
+.header-content-mobile {
+  display: none;
+  position: relative;
+  height: 36px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.collapsed {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+.collapsed:before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transition: .3s;
+}
+
+.collapsed:after {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transition: .3s;
+  transform: rotate3d(0, 0, 1, 90deg);
+}
+
+.collapsed.off:after {
+  transform: rotate3d(0, 0, 1, 0deg);
+}
+
+.mini-logo {
+  width: 30px;
+}
+
+
+
 .main {
   position: relative;
   margin: 0 auto;
@@ -60,14 +109,13 @@ header {
 aside {
   position: fixed;
   padding: 30px 0;
-  top: 121px;
-
-  transform: translateX(0);
-  transition: all .4s cubic-bezier(0.4, 0, 0, 1);
-
-  bottom: 0;
   width: 180px;
+  top: 121px;
+  bottom: 0;
+  transform: translateX(0);
+  transition: .4s;
   overflow-y: scroll;
+  z-index: 2;
 }
 
 aside h2 {
@@ -76,22 +124,19 @@ aside h2 {
   border-bottom: 1px solid #ccc;
 }
 
-dl {
+aside dl {
   margin: 15px 15px 15px;
   overflow: hidden;
 }
 
-dt {
-}
-
-dt:before {
+aside dt:before {
   content: '😽';
   display: inline-block;
   width: 15px;
   font-size: 10px;
 }
 
-dd {
+aside dd {
   margin: 10px 25px;
   font-size: 12px;
 }
@@ -133,7 +178,6 @@ footer {
 .to-be-continue { color: #999; }
 
 .disabled {
-  pointer-events: none;
   color: #999;
 }
 
@@ -145,22 +189,29 @@ footer {
     padding-left: 20px;
   }
 
-  .header-content p {
-    text-indent: 0;
+  .header-content {
+    display: none;
+  }
+
+  .header-content-mobile {
+    display: block;
   }
 
   aside {
     padding: 30px 20px;
     width: 140px;
-    
-    z-index: 2;
-    background: #f9f9f9;;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    top: 30px;
+    background: #f9f9f9;
     transform: translateX(-180px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  aside.show {
+    transform: translateX(0);
   }
 
   .content {
-    margin: 121px 20px 0;
+    margin: 35px 20px 0;
     padding-right: 20px;
     padding-left: 20px;
   }
