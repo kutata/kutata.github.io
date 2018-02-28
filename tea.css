@@ -116,6 +116,7 @@ aside {
   transition: .4s;
   overflow-y: scroll;
   z-index: 2;
+  -ms-overflow-style:none;
 }
 
 aside h2 {
